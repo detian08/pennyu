@@ -100,7 +100,7 @@ class StockPicking(models.Model):
         return {
             'display_name': self.partner_id.display_name or '-',
             'street': self.partner_id.street or '-',
-            'street2': self.partner_id.street2 or self.partner_id.kelurahan_id + ', ' + self.partner_id.kecamatan_id,
+            'street2': self.partner_id.street2 or '-',
             'city': self.partner_id.city or '-',
             'country': self.partner_id.country_id.name or ' ',
             'vat': self.partner_id.vat or ' ',
